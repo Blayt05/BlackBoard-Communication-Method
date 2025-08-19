@@ -35,8 +35,8 @@ class Robot(ap.Agent):
             
     def move_to_mission(self):
         if self.target:
-            dx = self.target.x - self.x
             dy = self.target.y - self.y
+            dx = self.target.x - self.x
             dist = math.sqrt(((dx) ** 2 + (dy) ** 2))
             if dist > self.v:
                 self.x = self.v * dx / dist
